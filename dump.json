@@ -1,0 +1,10 @@
+{
+    "Tony": {"password": "password123", "role": "engineering"},
+    "Bruce": {"password": "securepass", "role": "marketing"},
+    "Sam": {"password": "financepass", "role": "finance"},
+    "Peter": {"password": "pete123", "role": "engineering"},
+    "Sid": {"password": "sidpass123", "role": "marketing"},
+    "Natasha": {"password": "hrpass123", "role": "hr"},
+    "Evan": {"password": "evan1111", "role": "executives"},
+    "Mike": {"password": "mike1111","role": "general"}
+}
