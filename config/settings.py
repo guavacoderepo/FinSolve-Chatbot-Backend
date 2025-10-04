@@ -8,4 +8,4 @@ class Settings(BaseSettings):
     env: str = "development"
 
     class Config:
-        env_file =  "backend/.env"
+        env_file =  ".env"

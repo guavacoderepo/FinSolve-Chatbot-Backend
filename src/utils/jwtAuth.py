@@ -1,10 +1,10 @@
 from typing import Any, Dict, Optional
 from fastapi import Request, status, Depends
 from fastapi.exceptions import HTTPException
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from .accessUtils import decode_token
-from ..services.usersServices import UsersServices
-from ..db.base import get_db
+from fastapi.security import HTTPBearer
+from .authutil import decode_token
+from src.services.usersServices import UsersServices
+from src.db.base import get_db
 
 class AccessTokenBearer(HTTPBearer):
     def __init__(self, auto_error=True):

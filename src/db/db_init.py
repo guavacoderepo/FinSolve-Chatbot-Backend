@@ -1,7 +1,7 @@
 import sqlite3
 from pathlib import Path
 from .queries import Queries
-from ..config.settings import Settings
+from config.settings import Settings
 
 settings = Settings() # type: ignore
 

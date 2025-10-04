@@ -4,8 +4,8 @@ from openai.types.chat import ChatCompletionMessageParam
 from ..schemas.schemes import User, ConversationModel
 from datetime import datetime
 from typing import List, Dict, Optional
-from ..config.settings import Settings
-from ..services.chatServices import ChatServices
+from config.settings import Settings
+from src.services.chatServices import ChatServices
 
 settings = Settings() # type: ignore
 

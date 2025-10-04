@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
-from .app.routes.authRoute import auth_router
-from .app.routes.chatRoute import chat_router
-from .app.routes.ragRoute import rag_router
-from .app.middlewares.errorHandler import register_global_exception_handlers
+from src.routes.authRoute import auth_router
+from src.routes.chatRoute import chat_router
+from src.routes.ragRoute import rag_router
+from src.middlewares.errorHandler import register_global_exception_handlers
 from sentence_transformers import SentenceTransformer
-from .app.db.db_init import create_tables
-from .app.config.settings import Settings
+from src.db.db_init import create_tables
+from config.settings import Settings
 from qdrant_client import QdrantClient
 
 settings = Settings() # type: ignore

@@ -1,7 +1,7 @@
 import bcrypt
 import datetime
-import jwt
-from ..config.settings import Settings
+import jwt  # Ensure this is PyJWT, not python-jwt or jwt-simple
+from config.settings import Settings
 from fastapi import HTTPException, status
 
 settings = Settings()  # type: ignore # Load app settings (e.g., SECRET_KEY)

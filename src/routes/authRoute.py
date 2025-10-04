@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException, status
-from ..utils.jwtAuth import AccessTokenBearer
-from ..schemas.schemes import User, LoginModel, RegisterModel, AuthResponseModel
-from ..services.usersServices import UsersServices
-from ..db.base import get_db
-from ..utils.accessUtils import hash_password, check_password, generate_token
+from src.utils.jwtAuth import AccessTokenBearer
+from src.schemas.schemes import User, LoginModel, RegisterModel, AuthResponseModel
+from src.services.usersServices import UsersServices
+from src.utils.authutil import hash_password, check_password, generate_token
+from src.db.base import get_db
 
 auth_router = APIRouter()
 

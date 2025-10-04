@@ -1,5 +1,5 @@
 import sqlite3
-from ..config.settings import Settings
+from config.settings import Settings
 
 settings = Settings() # type: ignore
 

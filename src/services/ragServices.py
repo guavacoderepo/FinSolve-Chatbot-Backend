@@ -1,7 +1,7 @@
 import glob
 from .vectorServices import VectorService
 from typing import List, Dict
-from ..schemas.schemes import Roles
+from src.schemas.schemes import Roles
 
 class RAGService:
     def __init__(self, model, client, documents: List[Dict] = []):

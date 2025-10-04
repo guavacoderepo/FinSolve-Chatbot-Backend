@@ -1,7 +1,7 @@
 from typing import Dict, Any
 import sqlite3
-from ..db.queries import Queries
-from ..schemas.schemes import RegisterModel
+from src.db.queries import Queries
+from src.schemas.schemes import RegisterModel
 from fastapi import HTTPException, status
 
 class UsersServices:

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Request
-from ..services.ragServices import RAGService
+from src.services.ragServices import RAGService
 
 # Create a new API router for RAG-related endpoints
 rag_router = APIRouter()

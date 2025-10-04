@@ -1,12 +1,11 @@
 from fastapi import APIRouter, status, Request, HTTPException, Depends
-from ..schemas.schemes import ChatModel, User
-from ..utils.markdownPDF import download_pdf
-from ..db.base import get_db
-from ..services.llmServices import LLMServices
-from ..services.ragServices import RAGService
-from ..utils.jwtAuth import AccessTokenBearer
+from src.schemas.schemes import ChatModel, User
+from src.utils.markdownPDF import download_pdf
+from src.db.base import get_db
+from src.services.llmServices import LLMServices
+from src.services.ragServices import RAGService
+from src.utils.jwtAuth import AccessTokenBearer
 import re
-
 
 chat_router = APIRouter()
 
