@@ -10,7 +10,6 @@ openai==2.1.0
 pydantic==1.10.24
 pydantic_core==2.33.2
 PyJWT==2.10.1
-python-dateutil==2.9.0.post0
 python-dotenv==1.1.1
 qdrant-client==1.15.1
 regex==2025.9.18
@@ -18,8 +17,6 @@ requests==2.32.5
 requests-cache==0.9.8
 sentence-transformers
 setuptools==80.9.0
-torch
-transformers==4.57.0
 typeguard==4.4.4
 typing-inspection==0.4.2
 typing_extensions==4.15.0
