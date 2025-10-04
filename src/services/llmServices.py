@@ -6,7 +6,6 @@ from datetime import datetime
 from typing import List, Dict, Optional
 from config.settings import Settings
 from src.services.chatServices import ChatServices
-import os
 
 settings = Settings() # type: ignore
 
@@ -63,14 +62,9 @@ class LLMServices:
         Raises any errors encountered during the API call.
         """
         try:
-            # Ensure API key is set in env if not passed directly
-            if self.api_key:
-                os.environ["OPENAI_API_KEY"] = self.api_key
-
-            client = OpenAI()  # No proxies argument here
-
+            client = OpenAI(api_key=self.api_key)
             response = client.chat.completions.create(
-                model="gpt-4o",
+                model='gpt-4o',
                 messages=self.prompt_formate(rag_context)
             )
             return response.choices[0].message.content or ""
