@@ -12,8 +12,7 @@ pydantic==1.10.14
 python-dotenv==1.0.1
 qdrant-client==1.10.1
 regex
-requests==2.32.3
-requests-cache==1.2.0
+requests
 sentence-transformers==2.7.0
 torch==2.2.0+cpu
 -f https://download.pytorch.org/whl/torch_stable.html
