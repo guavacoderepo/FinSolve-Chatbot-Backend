@@ -8,6 +8,9 @@ from sentence_transformers import SentenceTransformer
 from src.db.db_init import create_tables
 from config.settings import Settings
 from qdrant_client import QdrantClient
+from fastapi.middleware.cors import CORSMiddleware
+
+
 
 settings = Settings() # type: ignore
 
@@ -36,6 +39,14 @@ async def lifespan(app: FastAPI):
 
 # Initialize FastAPI app with lifespan context manager
 app = FastAPI(lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Register custom global error handler middleware
 register_global_exception_handlers(app)
